@@ -31,4 +31,14 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(direction * playerSpeed * Time.deltaTime);
         
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.tag == "Tile")
+        {
+            Destroy(collision.gameObject,2f);
+        }
+    }
 }
