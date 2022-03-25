@@ -186,6 +186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4075109773158722363}
   - component: {fileID: 4785992721382673180}
+  - component: {fileID: 7806382743819260100}
   m_Layer: 0
   m_Name: ColliderChecking
   m_TagString: Player
@@ -220,6 +221,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1257801, y: 0.5214863, z: 1}
   m_Center: {x: -0.43710995, y: 0.7520536, z: 0}
+--- !u!114 &7806382743819260100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5254216170458724432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c908739d93f3841a202c7a662a8f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8659806283509657257
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    int score;
+    public int score;
     public Text scoreText;
 
-    public void ScoreCalculator(int scoreValue)
+    public void ScoreUpdate(int scoreValue)
     {
         score = score + scoreValue;
+        Debug.Log("Score: " + score);
         scoreText.text = score.ToString();
-        Debug.Log("Score : " + score);
     }
+        
+
 }

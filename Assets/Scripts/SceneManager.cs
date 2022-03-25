@@ -1,57 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
-public class SceneManager : MonoBehaviour
+public class SceneManager: MonoBehaviour
 {
-    public Button playButton;
+    // Start is called before the first frame update
+    public Button play;
     public Button instructions;
     public Button settings;
-    public Button instructionBack;
-    public Button settingBack;
+    //public Button instructionBack;
+    public Button back;
     public GameObject instructionsPanel;
     public GameObject settingsPanel;
-    public GameObject menuPanel;
+    public GameObject homePanel;
     void Start()
     {
-        playButton.onClick.AddListener(PlayGame);
+        play.onClick.AddListener(Play);
         instructions.onClick.AddListener(Instructions);
         settings.onClick.AddListener(Settings);
-        instructionBack.onClick.AddListener(InstructionBack);
-        settingBack.onClick.AddListener(SettingsBack);
+        back.onClick.AddListener(Back);
     }
 
     // Update is called once per frame
-
-    public void PlayGame()
+   
+    public void Play()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     public void Instructions()
     {
         instructionsPanel.SetActive(true);
-        menuPanel.SetActive(false);
-        instructionBack.gameObject.SetActive(true);
+        homePanel.SetActive(false);
+        back.gameObject.SetActive(true);
     }
     public void Settings()
     {
-
         settingsPanel.SetActive(true);
-        menuPanel.SetActive(false);
-        //settingBack.gameObject.SetActive(true);
+        homePanel.SetActive(false);
+        back.gameObject.SetActive(true);
     }
-    public void InstructionBack()
+    public void Back()
     {
         instructionsPanel.SetActive(false);
-        menuPanel.SetActive(true);
-    }
-
-    public void SettingsBack()
-    {
         settingsPanel.SetActive(false);
-        menuPanel.SetActive(true);
+        homePanel.SetActive(true);
+        back.gameObject.SetActive(false);       
     }
+   
+
 
 }
